@@ -1,0 +1,34 @@
+<view class="container">
+	<view class="function">
+    <text>需求列表</text>
+	</view>
+	<scroll-view class="requirement-list" scroll-y="true">
+    <view class="table-header">
+      <text class="title">需求名</text>
+			<text class="deadline">截止日期</text>
+			<text class="priority">优先级</text>
+			<text class="proposer">提出人</text>
+			<text class="status">状态</text>
+    </view>
+		<block wx:for-item></block>
+		<view class="requirement-item" wx:for="{{requirementList}}" wx:key="_id" bindtap="onClickDetail" id="{{item._id}}">
+			<view class="title">{{item.title}}</view>
+			<view class="deadline">{{item.deadline}}</view>
+			<view class="priority">{{item.priority}}</view>
+			<view class="proposer" wx:if="{{item.proposer}}">
+				<cover-image class="avatar" src="{{item.proposer.avatarUrl}}">
+					{{item.proposer.nickName}}
+				</cover-image>
+			</view>
+			<view class="status">
+				<icon type="success" wx:if="{{item.status=='done'}}"></icon>
+     		<icon type="waiting" wx:elif="{{item.status=='start'}}"></icon>
+     		<icon type="warn" wx:elif="{{item.status=='init'}}"></icon>
+			</view>
+		</view>
+    <text wx:if="{{requirementList.length == 0 }}">暂无需求</text>
+	</scroll-view> 
+	<view class="buttonView">
+		<button class="addButton" bindtap="onClickAdd">添加需求</button>
+	</view>
+</view>

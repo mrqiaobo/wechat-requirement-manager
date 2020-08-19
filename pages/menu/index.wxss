@@ -1,0 +1,21 @@
+/* pages/menu/index.wxss */
+.menu-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+}
+
+.menu-container view {
+  flex-grow: 1;
+}
+
+.menu-container view button {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: lightblue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 

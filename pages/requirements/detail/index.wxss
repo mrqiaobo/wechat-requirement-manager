@@ -1,0 +1,56 @@
+/* pages/requirements/detail/index.wxss */
+page {
+  height: 100%;
+}
+
+.detail-container {
+  height: 100%;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+.detail-container view {
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.detail-container .requirement-status text{
+  margin-left: 20rpx;
+}
+.detail-container .requirement-detail {
+  display: block;
+}
+.detail-container .requirement-detail text {
+  border: 1px solid lightblue;
+  display: block;
+  width: 100%;
+  min-height: 200rpx;
+  margin-top: 20rpx;
+}
+.detail-container view label {
+  flex-grow: 1;
+  min-width: 100rpx;
+}
+.detail-container view text {
+  flex-grow: 2;
+  color: rgba(0, 0, 0, 0.7);
+}
+.detail-container .proposer {
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.detail-container .proposer .proposer-detail {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0
+}
+.detail-container .proposer .proposer-detail text {
+  flex-grow: unset;
+}
+.proposer-detail .avatar{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50rpx;
+  margin-left: 20rpx;
+}

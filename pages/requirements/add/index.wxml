@@ -1,0 +1,26 @@
+<!--pages/requirements/add/index.wxml.wxml-->
+<view class="page-container">
+	<form bindsubmit="bindOnSubmit" class="add-form">
+		<view class="requirement-name">
+			<label for="requirementName">需求名称</label>
+			<input class="requirement-name-input" placeholder="请输入需求名"
+			id="requirementNameInput" name="requirementName" type="input" />
+		</view>
+
+		<view class="requirement-deadline">
+			<label for="requirementDeadline">需求截止日期</label>
+			<picker id="deadlinePicker" name="requirementDeadline" mode="date" start="1999-01-91" end="2999-12-31" bindchange="bindDateChange">
+				<view class="picker">
+					{{deadlineDate}}
+				</view>
+			</picker>
+		</view>
+		<view class="requirement-detail">
+			<label for="requirementDetail">需求详细内容</label>
+			<textarea class="requirement-detail-input" placeholder="请输入需求详细内容" id="requirementDetailInput" name="requirementDetail"></textarea>
+		</view>
+		<view class="function">
+			<button form-type="submit" size="default">提交需求</button>
+		</view>
+	</form>
+</view>

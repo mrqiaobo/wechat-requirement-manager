@@ -1,0 +1,45 @@
+/* pages/requirements/add/index.wxml.wxss */
+page {
+  height: 100%;
+}
+.page-container {
+  height: 100%;
+}
+.add-form {
+  display: block;
+  height: 100%;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+.add-form view {
+  margin-top: 30rpx;
+}
+
+
+.requirement-name-input, .picker {
+  border-bottom: 1px solid lightblue;
+}
+
+.requirement-detail-input {
+  border: 1px solid lightblue;
+  width: 100%;
+  min-height: 500rpx;
+  margin-top: 50rpx;
+
+}
+
+.function {
+  position: absolute;
+  bottom: 100rpx;
+  width: 100%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+
+.function button {
+  background-color: lightblue;
+  color: white;
+}

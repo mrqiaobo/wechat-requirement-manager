@@ -1,0 +1,34 @@
+<!--pages/requirements/detail/index.wxml-->
+<view class="detail-container">
+  <view>
+     <label>需求名称</label>
+     <text>{{requirement.title}}</text>
+  </view>
+  <view class="requirement-status">
+     <label>需求状态</label>
+     <icon type="success" wx:if="{{requirement.status=='done'}}"></icon>
+     <icon type="waiting" wx:elif="{{requirement.status=='start'}}"></icon>
+     <icon type="warn" wx:elif="{{requirement.status=='init'}}"></icon>
+     <text>{{requirement.status}}</text>
+  </view>
+  <view>
+     <label>优先级</label>
+     <text>{{requirement.priority}}</text>
+  </view>
+  <view class="requirement-detail">
+     <label>需求详情</label>
+     <text>{{requirement.detail ? requirement.detail : ""}}</text>
+  </view>
+  <view>
+     <label>截止日期</label>
+     <text>{{requirement.deadline}}</text>
+  </view>
+  <view class="proposer">
+    <label>提出人</label>
+    <view wx:if="{{requirement.proposer != null}}" class="proposer-detail">
+      <text>{{requirement.proposer.nickName}}</text>
+      <cover-image src="{{requirement.proposer.avatarUrl}}" class="avatar"></cover-image>
+    </view>
+  </view>
+</view>
+

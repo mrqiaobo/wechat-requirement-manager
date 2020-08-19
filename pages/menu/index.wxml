@@ -1,0 +1,8 @@
+<view class="menu-container">
+<view>
+  <button>私人留言</button>
+</view>
+<view>
+  <button bindtap="onclickRequirement">需求</button>
+</view>
+</view>
